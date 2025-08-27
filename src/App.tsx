@@ -12,13 +12,13 @@ import {
 } from "@aws-amplify/ui-react";
 import { Amplify } from "aws-amplify";
 import "@aws-amplify/ui-react/styles.css";
-import outputs from "../amplify_outputs.json";
+import config from "../amplify_outputs.json";
 import { generateClient } from "aws-amplify/data";
 import type { Schema } from "../amplify/data/resource";
 
 "use client"
 
-Amplify.configure(outputs); 
+Amplify.configure(config); 
 
 const client = generateClient<Schema>({
   authMode:"userPool",
